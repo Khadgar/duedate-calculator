@@ -1,0 +1,25 @@
+{
+  "name": "duedate-calculator",
+  "version": "1.0.0",
+  "description": "A very simple due-date calculator",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.14.0",
+    "moment": "^2.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Szaniszlo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
