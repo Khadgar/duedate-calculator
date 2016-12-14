@@ -36,17 +36,17 @@ var calculate = function(submit, turnaround) {
     // Recursive function calculates the due-date
     function loop(turnaround, submit_date) {
         if (turnaround === 0) {
-            return submit_date;
+            return submit_date.format("LLLL");
         } else {
             submit_date.add(1, "hours");
             if (isWeekDay(submit_date) && isWorkingHour(submit_date)) {
                 turnaround -= 1;
             }
-            loop(turnaround, submit_date);
+            return loop(turnaround, submit_date);
         }
     }
 
-    loop(turnaround, submit_date);
+    return loop(turnaround, submit_date);
 
     // Helper functions
     //
@@ -72,8 +72,6 @@ var calculate = function(submit, turnaround) {
     function isWorkingHour(date) {
         return (date.hours() >= startHour && date.hours() <= endHour);
     }
-
-    return submit_date.format("LLLL");
 
 };
 
